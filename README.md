@@ -1,5 +1,4 @@
-
-MIRACLE is a continual integration method for single-cell mosaic data (RNA, ADT, and ATAC are currently supported). In this repository, we mainly repreduce the results in the paper. For tutorials, please watch our another repository.
+MIRACLE is a continual integration method for single-cell mosaic data (RNA, ADT, and ATAC are currently supported). In this repository, we mainly repreduce the results in the paper. For tutorials, please watch our another repository [miracle](https://github.com/sc-miracle/miracle).
 
 # Preparation
 
@@ -11,7 +10,7 @@ conda install -i requirements.txt
 
 **Main packages:**
 
-(Python)
+**Python**
 
 Python==3.11
 
@@ -23,13 +22,13 @@ scanpy==1.9.6
 
 scib==1.1.4
 
-(R)
+**R**
 
 seurat== 4.1.0
 
 signac ==1.6.0
 
-# Horizontal integration (DCM_HCM)
+# Horizontal integration (DHCM)
 
 ## Processing data
 
