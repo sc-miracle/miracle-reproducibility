@@ -151,7 +151,7 @@ Rscript comparison/midas_embed.r --task teadog --experiment continual_7
 
 # Comparison integration methods
 
-pleaser refer to the **reproducibility-code** directory
+Please refer to the **reproducibility-code** directory
 
 # Continual construction of cross-tissue multimodal atlas
 
