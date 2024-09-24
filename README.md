@@ -78,7 +78,7 @@ see:
 reproducibility-code/result2-DCM_HCM/compare_subsampling.ipynb
 ```
 
-# Continual integration across batches and cell type
+# Continual integration across batches and cell types
 ## Generating data
 
 Generating 8 batches of RNA+ADT data (WNN).
