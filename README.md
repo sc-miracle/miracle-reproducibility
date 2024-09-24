@@ -28,7 +28,7 @@ seurat== 4.1.0
 
 signac ==1.6.0
 
-# Continual Integration of snRNA-seq data (DHCM)
+# Continual integration of snRNA-seq data (DHCM)
 
 ## Processing data
 
