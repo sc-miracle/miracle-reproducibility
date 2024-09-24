@@ -112,7 +112,7 @@ python eval/benchmark_batch_bio.py --task wnn --experiment continual_7
 Rscript comparison/midas_embed.r --task wnn --experiment continual_7
 ```
 
-# Continual mosaic integration (DOTEA)
+# Continual mosaic integration
 
 ## Generating training data
 
