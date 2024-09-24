@@ -24,17 +24,17 @@ scib==1.1.4
 
 **R**
 
-seurat== 4.1.0
+seurat==4.1.0
 
-signac ==1.6.0
+signac==1.6.0
 
-# Continual integration of snRNA-seq data (DHCM)
+# Continual integration using limited memory
 
 ## Processing data
 
 For quality control, please see `reproducibility-code/result2-DCM_HCM/proprocess_dcm_hcm.ipynb`.
 
-Generating 42 bathes of data (in this experiment, all batches are considered with the same features):
+Generating 42 batches of snRNA-seq data (DHCM); in this experiment, all batches are considered to have the same features.
 
 ```bash
 Rscript preprocess/combine_subsets.R --task dcm_hcm
@@ -62,7 +62,7 @@ python eval/benchmark_batch_bio.py --task dcm_hcm --experiment continual_41
 
 ## Visualization
 
-It takes a long time to compute the UMAP for the variable u. Therefore, we suggest you to visualize the UMAP only for the variable c by setting 'use_u' to 0.
+It takes a long time to compute the UMAP for the variable u. Therefore, we suggest visualizing the UMAP only for the variable c by setting 'use_u' to 0.
 
 ```bash
 Rscript comparison/midas_embed.r --task dcm_hcm --experiment continual_41 --use_u 0
@@ -78,10 +78,10 @@ see:
 reproducibility-code/result2-DCM_HCM/compare_subsampling.ipynb
 ```
 
-# Continual integration of RNA+ADT data (WNN)
+# Continual integration across batches and cell type
 ## Generating data
 
-Generating 8 bathes of data:
+Generating 8 batches of RNA+ADT data (WNN).
 
 ```bash
 Rscript preprocess/combine_subsets.R --task p1_0 && py preprocess/split_mat.py --task p1_0 & 
@@ -112,11 +112,11 @@ python eval/benchmark_batch_bio.py --task wnn --experiment continual_7
 Rscript comparison/midas_embed.r --task wnn --experiment continual_7
 ```
 
-# Continual integration of RNA+ATAC+ADT data (DOTEA)
+# Continual mosaic integration (DOTEA)
 
 ## Generating training data
 
-Generating 8 different DOTEA mosaic datasets:
+Generating 42 batches of snRNA-seq data (DHCM); in this experiment, all batches are considered to have the same features.
 
 ```bash
 Rscript preprocess/combine_subsets.R --task teadog_label_mask && py preprocess/split_mat.py --task teadog_label_mask # reference
@@ -153,7 +153,7 @@ Rscript comparison/midas_embed.r --task teadog --experiment continual_7
 
 pleaser refer to the **reproducibility-code** directory
 
-# Continual atlas construction
+# Continual construction of cross-tissue multimodal atlas
 
 ## Integrate atlas with MIRACLE-offline
 
@@ -198,7 +198,7 @@ py preprocess/split_mat.py --task spleen
 python train.py --cuda 4 --task atlas_tissues_cl --actions train predict_subsample subsample predict_all --denovo 0
 ```
 
-# Accurate label transfer
+# Label transfer for cross-tissue mosaic data
 
 ## Label transfer of PBMC query datasets
 
