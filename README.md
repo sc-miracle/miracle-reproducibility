@@ -1,4 +1,4 @@
-MIRACLE is a continual integration method for single-cell mosaic data (RNA, ADT, and ATAC are currently supported). In this repository, we mainly repreduce the results in the paper. For tutorials, please watch our another repository [miracle](https://github.com/sc-miracle/miracle).
+MIRACLE is a continual integration method for single-cell multimodal data.
 
 # Preparation
 
@@ -28,7 +28,7 @@ seurat== 4.1.0
 
 signac ==1.6.0
 
-# Horizontal integration (DHCM)
+# Continual Integrationn of snRNA-seq data (DHCM)
 
 ## Processing data
 
@@ -78,8 +78,7 @@ see:
 reproducibility-code/result2-DCM_HCM/compare_subsampling.ipynb
 ```
 
-# Rectangular integration (WNN)
-
+# Continual integration of RNA+ADT data (WNN)
 ## Generating data
 
 Generating 8 bathes of data:
@@ -113,11 +112,11 @@ python eval/benchmark_batch_bio.py --task wnn --experiment continual_7
 Rscript comparison/midas_embed.r --task wnn --experiment continual_7
 ```
 
-# Mosaic integration (DOTEA)
+# Continual integration of RNA+ATAC+ADT data (DOTEA)
 
 ## Generating training data
 
-Generating 8 different teadog mosaic datasets:
+Generating 8 different DOTEA mosaic datasets:
 
 ```bash
 Rscript preprocess/combine_subsets.R --task teadog_label_mask && py preprocess/split_mat.py --task teadog_label_mask # reference
