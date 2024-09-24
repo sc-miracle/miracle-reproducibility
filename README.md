@@ -113,7 +113,7 @@ python eval/benchmark_batch_bio.py --task wnn --experiment continual_7
 Rscript comparison/midas_embed.r --task wnn --experiment continual_7
 ```
 
-# Mosaic integration (TEADOG)
+# Mosaic integration (DOTEA)
 
 ## Generating training data
 
