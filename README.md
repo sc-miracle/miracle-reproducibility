@@ -28,13 +28,13 @@ seurat== 4.1.0
 
 signac ==1.6.0
 
-# Continual Integrationn of snRNA-seq data (DHCM)
+# Continual Integration of snRNA-seq data (DHCM)
 
 ## Processing data
 
 For quality control, please see `reproducibility-code/result2-DCM_HCM/proprocess_dcm_hcm.ipynb`.
 
-Generating 42 bathes of data (in this experiement, all batches are considered with the same features):
+Generating 42 bathes of data (in this experiment, all batches are considered with the same features):
 
 ```bash
 Rscript preprocess/combine_subsets.R --task dcm_hcm
@@ -68,7 +68,7 @@ It takes a long time to compute the UMAP for the variable u. Therefore, we sugge
 Rscript comparison/midas_embed.r --task dcm_hcm --experiment continual_41 --use_u 0
 ```
 
-The obtained seurat object contains the UMAP embeddings and you can visualize them referring to the notebook `~/MIRACLE-reproducibility/reproducibility-code/result2-DCM_HCM/visualize_results.ipynb`
+The obtained seurat object contains the UMAP embeddings and you can visualize them in the notebook `~/MIRACLE-reproducibility/reproducibility-code/result2-DCM_HCM/visualize_results.ipynb`
 
 ## Comparison of subsampling methods
 
