@@ -116,7 +116,7 @@ Rscript comparison/midas_embed.r --task wnn --experiment continual_7
 
 ## Generating training data
 
-Generating 42 batches of snRNA-seq data (DHCM); in this experiment, all batches are considered to have the same features.
+Generating 8 batches of mosaic data (RNA+ATAC+ADT; DOTEA).
 
 ```bash
 Rscript preprocess/combine_subsets.R --task teadog_label_mask && py preprocess/split_mat.py --task teadog_label_mask # reference
