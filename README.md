@@ -1,4 +1,4 @@
-MIRACLE is a continual integration method for single-cell multimodal data.
+MIRACLE is a continual integration method for single-cell multimodal data. In this repository, we mainly repreduce the results in the paper, For tutorials, please watch our another repository [here](https://github.com/sc-miracle/miracle). 
 
 # Preparation
 
